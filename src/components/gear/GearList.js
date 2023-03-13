@@ -36,7 +36,7 @@ export const GearList = () => {
             {
                 gearItems?.map(
                     (gearItem) => {
-                        return <section className="gearItem">
+                        return <section className="gearItem" key={gearItem.id}>
                             {gearItem.name}, Type:{gearItem.type}, {gearItem?.categories?.name}
                         </section>
                     }

@@ -21,8 +21,8 @@ export const RequestList = () => {
             {
                 requests.map(
                     (request) => {
-                        return <section className="request">
-                            {request?.user?.name}, {request?.user?.email}, {request?.details} {request?.dateRequested}
+                        return <section className="request" key={request.id}>
+                            {request?.user?.fullName}, {request?.user?.email}, {request?.details} {request?.dateRequested}
                         </section>
                     }
                     
