@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { GearItem } from "./GearItem"
+import "./GearList.css"
 
 
-export const GearList = () => {
+export const GearList = ({ searchTermState }) => {
     const [gearItems, setGearItems] = useState([])
-
+    const [filteredGearItems, setFiltered] = useState([])
     const localSolariumUser = localStorage.getItem("solarium_user")
     const solariumUserObject = JSON.parse(localSolariumUser)
     const navigate = useNavigate()
-
 
     useEffect(
         () => {
@@ -20,6 +21,18 @@ export const GearList = () => {
             
         },
         [] 
+    )
+
+    useEffect(
+        () => {
+            const searchedGearItems = gearItems.filter(gearItem => {
+                return gearItem?.name?.toLowerCase().includes(searchTermState.toLowerCase())  ||
+                gearItem?.category?.toLowerCase().includes(searchTermState.toLowerCase()) ||
+                gearItem?.type?.toLowerCase().includes(searchTermState.toLowerCase()) 
+            })
+            setFiltered(searchedGearItems)
+        },
+        [ searchTermState ]
     )
 
     return <>
@@ -34,11 +47,9 @@ export const GearList = () => {
         <h2>List of Gear</h2>
         <article className="gearItems">
             {
-                gearItems?.map(
+                filteredGearItems?.map(
                     (gearItem) => {
-                        return <section className="gearItem" key={gearItem.id}>
-                            {gearItem.name}, Type:{gearItem.type}, {gearItem?.categories?.name}
-                        </section>
+                        return <GearItem gearItemObject={gearItem} />
                     }
                     
                 )

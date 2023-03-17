@@ -1,5 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom"
-import { GearList } from "../gear/GearList"
+import { GearContainer } from "../gear/GearContainer"
 import { RequestForm } from "../requests/RequestForm"
 
 
@@ -15,7 +15,7 @@ export const CustomerViews = () => {
                     <Outlet />
                 </>
             }>
-                <Route path="gearlist" element={ <GearList /> } />
+                <Route path="gearlist" element={ <GearContainer /> } />
 				<Route path="requestform" element={ <RequestForm /> } />
             </Route>
         </Routes>

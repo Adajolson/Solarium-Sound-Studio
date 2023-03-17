@@ -7,7 +7,7 @@ export const GearForm = () => {
         type: "",
         categoriesId: "",
         name: "",
-        detail: ""
+        imageURL: ""
     })
     const navigate = useNavigate()
 
@@ -32,7 +32,7 @@ export const GearForm = () => {
             type: gearItem.type,
             categoriesId: parseInt(gearItem.categoriesId),
             name: gearItem.name,
-            detail: gearItem.detail
+            imageURL: gearItem.imageURL
 
         }
  
@@ -88,7 +88,7 @@ export const GearForm = () => {
                             {
                                 categories.map(
                                     category => {
-                                        return <option value={category.id}>{category.name}</option>
+                                        return <option value={category.id} key={category.id}>{category.name}</option>
                                     }
                                 )
                             }
@@ -110,6 +110,24 @@ export const GearForm = () => {
                             (evt) => {
                                 const copy = {...gearItem}
                                 copy.type = evt.target.value
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="image">Image URL: </label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        placeholder="Put URL here"
+                        value={gearItem.imageURL}
+                        onChange={
+                            (evt) => {
+                                const copy = {...gearItem}
+                                copy.imageURL = evt.target.value
                                 update(copy)
                             }
                         } />

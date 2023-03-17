@@ -1,0 +1,33 @@
+.gearItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+    margin: 1rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(0deg, rgba(234,166,87,1) 1%, rgba(234,166,87,1) 8%, rgba(234,166,87,1) 32%, rgba(234,166,87,1) 50%, rgba(234,166,87,1) 100%)
+}
+
+.gearItem {
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 350px;
+    width: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 51% 48%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(255,255,255,1) 41%, rgba(252,252,252,1) 47%, rgba(234,166,87,1) 75%, rgba(234,166,87,1) 100%);
+}
+
+.gearImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.gearCategory {
+    margin-left: -100%;
+    margin-right: -100%;
+    text-align: center;
+}

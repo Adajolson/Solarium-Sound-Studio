@@ -27,8 +27,9 @@ export const DeleteGear = () => {
             {
                 gearItems?.map(
                     (gearItem) => {
-                        return <section className="gearItem">
-                            {gearItem.name}, Type:{gearItem.type}, {gearItem?.categories?.name}
+                        return <section className="gearItem" key={gearItem.id}>
+                            <img className="gearImage" src={gearItem.imageURL} alt=""/>
+                            {gearItem.name}
                             <button onClick={() => 
                                 fetch(`http://localhost:8088/gearItems/${gearItem.id}`, {
                                     method: "DELETE"

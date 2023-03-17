@@ -1,5 +1,6 @@
 import { CustomerNav } from "./CustomerNav"
 import { EmployeeNav } from "./EmployeeNav"
+import "./NavBar.css"
 
 export const NavBar = () => {
     const localSolariumUser = localStorage.getItem("solarium_user")
