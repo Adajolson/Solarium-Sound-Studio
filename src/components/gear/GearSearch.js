@@ -1,9 +1,11 @@
+import "./GearList.css"
+
 export const GearSearch = ({ setterFunction }) => {
     return (
         <div>
 
-        <input 
-            onChange={
+        <input className="searchBar"
+            onKeyUp={
                 (changeEvent) => {
                     setterFunction(changeEvent.target.value)
                 }

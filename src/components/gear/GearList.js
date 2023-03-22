@@ -25,29 +25,32 @@ export const GearList = ({ searchTermState }) => {
 
     useEffect(
         () => {
-            const searchedGearItems = gearItems.filter(gearItem => {
-                return gearItem?.name?.toLowerCase().includes(searchTermState.toLowerCase())  ||
-                gearItem?.category?.toLowerCase().includes(searchTermState.toLowerCase()) ||
-                gearItem?.type?.toLowerCase().includes(searchTermState.toLowerCase()) 
-            })
-            setFiltered(searchedGearItems)
+            if (searchTermState?.length > 0) {
+                
+                    const searchedGearItems = gearItems.filter(gearItem => {
+                    return gearItem?.name?.toLowerCase().includes(searchTermState.toLowerCase())  ||
+                    gearItem?.category?.toLowerCase().includes(searchTermState.toLowerCase()) ||
+                    gearItem?.type?.toLowerCase().includes(searchTermState.toLowerCase()) 
+                })
+            setFiltered(searchedGearItems)}
+            else {setFiltered(gearItems)}
         },
-        [ searchTermState ]
+        [ searchTermState, gearItems ]
     )
 
     return <>
     {
         solariumUserObject.staff
         ?<>
-        <button onClick={() => navigate("/gear/add")}>Add Gear</button>
-        <button onClick={() => navigate("/gear/delete")}>Delete Gear</button>
+        <button className="gearButton" onClick={() => navigate("/gear/add")}>Add Gear</button>
+        <button className="gearButton" onClick={() => navigate("/gear/delete")}>Delete Gear</button>
         </>
         : ""
     }
         <h2>List of Gear</h2>
-        <article className="gearItems">
+        <article className="gearItems flex flex-wrap p-10 m-2 space-y-3 bg-amber-500">
             {
-                filteredGearItems?.map(
+                filteredGearItems.map(
                     (gearItem) => {
                         return <GearItem gearItemObject={gearItem} />
                     }

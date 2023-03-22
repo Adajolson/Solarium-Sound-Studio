@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
+import "./Login.css"
 
 export const Login = () => {
     const [email, set] = useState("adam@olson.com")
@@ -31,8 +32,8 @@ export const Login = () => {
         <main className="container--login">
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Solarium Sound Studio</h1>
-                    <h2>Please sign in</h2>
+                    <h1 className="title">Solarium Sound Studio</h1>
+                    <h2 className="signIn">Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
                         <input type="email"

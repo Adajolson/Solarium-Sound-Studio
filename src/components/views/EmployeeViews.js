@@ -3,6 +3,7 @@ import { DeleteGear } from "../gear/DeleteGear"
 import { GearForm } from "../gear/GearForm"
 import { GearList } from "../gear/GearList"
 import { RequestList } from "../requests/RequestList"
+import "./Views.css"
 
 
 
@@ -11,8 +12,8 @@ export const EmployeeViews = () => {
 	<Routes>
             <Route path="/" element={
                 <>
-                    <h1>Solarium Sound Studio</h1>
-                    <div>San Francisco, CA</div>
+                    <h1 className="title">Solarium Sound Studio</h1>
+                    <div className="city">San Francisco, CA</div>
 
                     <Outlet />
                 </>

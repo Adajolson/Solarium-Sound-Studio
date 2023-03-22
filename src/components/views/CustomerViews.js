@@ -1,6 +1,7 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { GearContainer } from "../gear/GearContainer"
 import { RequestForm } from "../requests/RequestForm"
+import "./Views.css"
 
 
 
@@ -9,8 +10,8 @@ export const CustomerViews = () => {
 	<Routes>
             <Route path="/" element={
                 <>
-                    <h1>Solarium Sound Studio</h1>
-                    <div>San Francisco, CA</div>
+                    <h1 className="title">Solarium Sound Studio</h1>
+                    <div className="city">San Francisco, CA</div>
 
                     <Outlet />
                 </>
