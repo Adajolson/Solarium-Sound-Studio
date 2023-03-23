@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { GearItem } from "./GearItem"
 import "./GearList.css"
+import { Mics } from "./Mics"
 
 
 export const GearList = ({ searchTermState }) => {
@@ -18,7 +19,6 @@ export const GearList = ({ searchTermState }) => {
             .then((gearItemArray) => {
                 setGearItems(gearItemArray)
             })
-            
         },
         [] 
     )
@@ -37,7 +37,7 @@ export const GearList = ({ searchTermState }) => {
         },
         [ searchTermState, gearItems ]
     )
-
+    
     return <>
     {
         solariumUserObject.staff

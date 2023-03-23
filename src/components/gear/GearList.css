@@ -39,7 +39,8 @@
     margin-top: 1rem;
 }
 
-.gearButton:hover {
+.gearButton {
     text-align: center;
     margin: 3rem;
+    
 }

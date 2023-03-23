@@ -11,3 +11,14 @@
     font-size: 30px;
     font-weight: 25px;
 }
+
+.logo {
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+
+}

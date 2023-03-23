@@ -120,18 +120,20 @@
 } */
 
 .navbar {
-  flex: flex;
-  flex-direction: row;
-  justify-content: right;
-  padding: 3rem;
-  margin: 3rem
+  padding-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 body {
   flex: flex;
-  background-color: rgb(230, 132, 21);
+  background-color: rgb(228, 144, 88);
 }
 
 .navbar__item{
-  flex-direction: row;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%
 }
