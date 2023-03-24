@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { GearItem } from "./GearItem"
 import "./GearList.css"
-import { Mics } from "./Mics"
+
 
 
 export const GearList = ({ searchTermState }) => {
@@ -47,8 +47,8 @@ export const GearList = ({ searchTermState }) => {
         </>
         : ""
     }
-        <h2>List of Gear</h2>
-        <article className="gearItems flex flex-wrap p-10 m-2 space-y-3 bg-amber-500">
+        <h2 className="gearListTitle" >List of Gear</h2>
+        <article className="gearItems flex flex-wrap p-10 m-2 space-y-3">
             {
                 filteredGearItems.map(
                     (gearItem) => {

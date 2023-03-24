@@ -1,46 +1,50 @@
-/* .gearItems {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 1rem;
-    margin: 1rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(0deg, rgba(234,166,87,1) 1%, rgba(234,166,87,1) 8%, rgba(234,166,87,1) 32%, rgba(234,166,87,1) 50%, rgba(234,166,87,1) 100%)
-}
-
-.gearItem {
-    display: flex;
-    margin: 1rem;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 350px;
-    width: 250px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 51% 48%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(255,255,255,1) 41%, rgba(252,252,252,1) 47%, rgba(234,166,87,1) 75%, rgba(234,166,87,1) 100%);
-}
-
-.gearImage {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-}
-
-.gearCategory {
-    margin-left: -100%;
-    margin-right: -100%;
-    text-align: center;
-} */
-
 .searchBar {
     width: 100%;
     text-align: center;
-    background-color: rgb(0, 247, 255);
+    background-color: transparent;
     margin-top: 1rem;
+    padding: 1rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: larger;
 }
 
 .gearButton {
     text-align: center;
     margin: 3rem;
-    
+}
+
+.deleteButton {
+    transition-duration: 0.4s;
+    border: 2px solid #4cafaa;
+  }
+  
+.deleteButton:hover {
+    background-color: #2ac2ba;
+    color: white;
+  }
+
+.gearListtitle {
+    text-align: center;
+}
+
+.gearForm {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.categoryFilter {
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 200;
+}
+
+.gearListTitle {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    font-size: xx-large;
+    margin-left: 50%;
+    margin-right: 50%;
+    width: 100%;
 }

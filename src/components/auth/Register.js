@@ -59,7 +59,7 @@ export const Register = (props) => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Solarium Sound Studio</h1>
                 <fieldset>
@@ -87,6 +87,6 @@ export const Register = (props) => {
                     <button type="submit"> Register </button>
                 </fieldset>
             </form>
-        </main>
+        </div>
     )
 }

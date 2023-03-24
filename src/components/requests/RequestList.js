@@ -16,16 +16,24 @@ export const RequestList = () => {
     )
 
     return <>
-        <h2 className="requestTitle ">List of Requests</h2>
-        <article className="requests flex flex-wrap p-10 m-2 space-y-3 bg-amber-500">
+        <h2 className="requestTitle text-center pt-6 text-lg">Current Requests</h2>
+        <article className="requests flex flex-col p-10-2 space-y-3 m">
             {
                 requests.map(
                     (request) => {
-                        return <section className="request py-8 px-8 max-w-sm mx-auto bg-orange-300 rounded-xl shadow-lg shadow-orange-300 space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6" key={request.id}>
-                            <h3 className="requestUser text-center space-y-2 sm:text-left">{request?.user?.fullName}</h3>
-                            <p className="gearName text-lg text-black font-semibold">{request?.details}</p>
-                            <p className="gearName text-lg text-black font-semibold">{request?.dateRequested}</p>
-                        </section>
+                        return <>
+                            <div class="flip-card-request shadow-lg rounded-xl shadow-white">
+                                <div class="flip-card-inner-request">
+                                    <div class="flip-card-front-request">
+                                        <div><h3 className="requestUser">{request?.user?.fullName}</h3></div>
+                                    </div>
+                                    <div class="flip-card-back-request">
+                                        <p className="gearName ">{request?.details}</p>
+                                        <p className="gearDate ">{request?.dateRequested}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </>
                     }
                     
                 )

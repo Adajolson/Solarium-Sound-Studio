@@ -1,0 +1,52 @@
+.requestForm {
+    display: inline-block
+}
+
+.flip-card-request {
+    background-color: transparent;
+    width: 350px;
+    height: 200px;
+    perspective: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner-request {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card-request:hover .flip-card-inner-request {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front-request, .flip-card-back-request {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front-request {
+    padding-top: 25%;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back-request {
+    padding-top: 25%;
+    text-align: center;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+  }

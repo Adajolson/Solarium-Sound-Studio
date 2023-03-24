@@ -32,22 +32,20 @@ export const GearFilter = () => {
 
     return <>
 
-        <select className="categoryFilter" onChange={(e) => {
+        <select className="categoryFilter text-center mt-6 mr-auto ml-auto" onChange={(e) => {
               const filtered = gearItems.filter((gearItem)=> gearItem.categoriesId === parseInt(e.target.value) )
               setFiltered(filtered);
             }}> 
         <option  value="placeholder">Filter by Category</option> 
         {categories.map((category) => {
           return (
-            <option value={category.id} key={category.id}>
+            <option className="categoryFilter" value={category.id} key={category.id}>
               {category.id}- {category.name}
             </option>
           );
         })}
       </select>
-
-      <h2>List of Gear</h2>
-        <article className="gearItems flex flex-wrap p-10 m-2 space-y-3 bg-amber-500">
+        <article className="gearItems flex flex-wrap p-10 m-2 space-y-3">
             {
                 filteredItems.map(
                     (gearItem) => {

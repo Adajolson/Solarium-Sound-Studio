@@ -4,7 +4,7 @@ import { Register } from "./components/auth/Register"
 import { NavBar } from "./components/nav/Navbar"
 import { ApplicationViews } from "./components/views/ApplicationViews"
 import { Authorized } from "./components/views/Authorized"
-import "./App.css"
+import "./index.css"
 
 
 

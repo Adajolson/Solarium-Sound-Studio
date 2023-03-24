@@ -6,13 +6,12 @@ import { RequestList } from "../requests/RequestList"
 import "./Views.css"
 
 
-
 export const EmployeeViews = () => {
 	return <>
 	<Routes>
             <Route path="/" element={
                 <>
-                    <img className="logo" src="../public/Solarium.png" alt=""/>
+                    
                     <h1 className="title">Solarium Sound Studio</h1>
                     <div className="city">San Francisco, CA</div>
 
