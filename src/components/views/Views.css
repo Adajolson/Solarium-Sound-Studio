@@ -1,8 +1,9 @@
-.title {
+.siteTitle {
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
     font-size: 40px;
     font-weight: 25px;
+    padding-top: 10rem;
 }
 
 .city {
@@ -14,8 +15,8 @@
 
 .logo {
     justify-content: center;
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     margin-bottom: 2rem;
     margin-left: auto;

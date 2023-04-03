@@ -52,15 +52,15 @@ export const GearForm = () => {
     }
 
     return (
-        <form className="gearForm">
-            <h2 className="gearForm__title">New Gear Item</h2>
+        <div className="formBody">
+        <form className="form">
+            <h2 className="title">New Gear Item</h2>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">name:</label>
+                <div className="input-container ic1">
                     <input
-                        required autoFocus
+                        id="gearName"
                         type="text"
-                        className="form-control"
+                        className="input"
                         placeholder="Name of Gear Item"
                         value={gearItem.name}
                         onChange={
@@ -70,13 +70,12 @@ export const GearForm = () => {
                                 update(copy)
                             }
                         } />
+                        <div class="cut"></div>
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="categories">Product Type:</label>
-
-                    <select value={gearItem.categoriesId}
+                <div className="input-container ic2">
+                    <select id="productType" className="input" value={gearItem.categoriesId}
                     onChange={
                         (evt) => {
                             const copy = {...gearItem}
@@ -84,7 +83,7 @@ export const GearForm = () => {
                             update(copy)
                         }
                     }>
-                        <option value="0">Choose a category:</option>
+                        <option value="0">Product Type:</option>
                             {
                                 categories.map(
                                     category => {
@@ -95,15 +94,15 @@ export const GearForm = () => {
         
                         
                     </select>
+                    <div class="cut"></div>
                 </div>
             </fieldset> 
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="type">Gear Type:</label>
+                <div className="input-container ic2">
                     <input
-                        required autoFocus
+                        id="type"
                         type="text"
-                        className="form-control"
+                        className="input"
                         placeholder="Type of equipment"
                         value={gearItem.type}
                         onChange={
@@ -113,16 +112,16 @@ export const GearForm = () => {
                                 update(copy)
                             }
                         } />
+                        <div class="cut"></div>
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="image">Image URL: </label>
+                <div className="input-container ic2">
                     <input
-                        required autoFocus
+                        id="image"
                         type="text"
-                        className="form-control"
-                        placeholder="Put URL here"
+                        className="input"
+                        placeholder="Put Image URL here"
                         value={gearItem.imageURL}
                         onChange={
                             (evt) => {
@@ -131,13 +130,15 @@ export const GearForm = () => {
                                 update(copy)
                             }
                         } />
+                        <div class="cut cut-short"></div>
                 </div>
             </fieldset>
             <button 
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-                className="btn btn-primary">
-                Submit Ticket
+                className="submit">
+                Submit
             </button>
         </form>
+        </div>
     )
 }

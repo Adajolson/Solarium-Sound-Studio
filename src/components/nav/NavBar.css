@@ -123,10 +123,10 @@
   padding-top: 3rem;
 }
  
-body {
+ /* body {
   flex: flex;
   background: linear-gradient(45deg, rgba(250,112,0,1) 0%, rgba(255,255,255,1) 78%, rgba(245,195,138,1) 100%);
-}
+}  */
 /* 
 .navbar__item{
   display: block;
@@ -166,6 +166,7 @@ body {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  padding-bottom: 3rem;
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -176,7 +177,7 @@ body {
 
 /* Style the back side */
 .flip-card-back {
-  padding-top: 180px;
+  padding-top: 7rem;
   text-align: center;
   font-size: large;
   color: rgb(0, 0, 0);

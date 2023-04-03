@@ -13,7 +13,7 @@ export const CustomerViews = () => {
             <Route path="/" element={
                 <>
                     
-                    <h1 className="title">Solarium Sound Studio</h1>
+                    <h1 className="siteTitle">Solarium Sound Studio</h1>
                     <div className="city">San Francisco, CA</div>
 
                     <Outlet />

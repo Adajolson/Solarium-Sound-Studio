@@ -41,9 +41,10 @@ export const GearList = ({ searchTermState }) => {
     return <>
     {
         solariumUserObject.staff
-        ?<>
-        <button className="gearButton" onClick={() => navigate("/gear/add")}>Add Gear</button>
-        <button className="gearButton" onClick={() => navigate("/gear/delete")}>Delete Gear</button>
+        ?<><div className="buttons-container">
+        <button className="button-arounder" onClick={() => navigate("/gear/add")}>Add Gear</button>
+        <button className="button-arounder" onClick={() => navigate("/gear/delete")}>Delete Gear</button>
+        </div>
         </>
         : ""
     }

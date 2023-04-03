@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./RequestForm.css"
 import "./Request.css"
 
 export const RequestForm = () => {
@@ -40,16 +41,17 @@ export const RequestForm = () => {
     }
 
     return (
-        <form className="requestForm">
-            <h2 className="requestForm__title">New Service request</h2>
+        <div className="formBody">
+        <form className="form">
+            <h2 className="title">New Rental Request</h2>
+            <div className="subtitle">Let's create your request!</div>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="details">Details:</label>
+                <div className="input-container ic1">
                     <input
-                        required autoFocus
+                        id="reservationDetails"
                         type="text"
-                        className="form-control"
-                        placeholder="Let us know what we can help with."
+                        className="input"
+                        placeholder="Tell us what you need!"
                         value={request.details}
                         onChange={
                             (evt) => {
@@ -58,16 +60,18 @@ export const RequestForm = () => {
                                 update(copy)
                             }
                         } />
+                        <div className="cut"></div>
+
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="input-container ic2">
                     <label htmlFor="dateRequested">Date requested:</label>
                     <input 
-                    required autoFocus
-                        type="text"
-                        className="form-control"
-                        placeholder="Let us know when you'd like to come in."
+                        id="dateRequested"
+                        type="date"
+                        className="input"
+                        placeholder=" "
                         value={request.dateRequested}
                         onChange={
                             (evt) => {
@@ -76,13 +80,16 @@ export const RequestForm = () => {
                                 update(copy)
                             }
                         } />
+                        <div class="cut"></div>
+                        
                 </div>
             </fieldset>
             <button 
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-                className="btn btn-primary">
+                className="submit">
                 Submit Request
             </button>
         </form>
+        </div>
     )
 }
