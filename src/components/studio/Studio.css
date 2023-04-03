@@ -1,0 +1,11 @@
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.photo {
+   padding: 1rem;
+   border-radius: 8%;
+   
+}

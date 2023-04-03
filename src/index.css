@@ -12,6 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(45deg, rgba(250,112,0,1) 0%, rgba(255,255,255,1) 78%, rgba(245,195,138,1) 100%);
   min-height: 100vh;
+  padding-bottom: 50px;
 }
 
 code {

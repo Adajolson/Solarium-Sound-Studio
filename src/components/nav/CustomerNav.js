@@ -13,6 +13,9 @@ export const CustomerNav = () => {
                 </div>
                 <div class="flip-card-back">
                     <ul className="navbar">
+                    <li className="navbar__item navbar__gear">
+                            <Link className="navbar__link" to="/studio">Studio</Link>
+                        </li>
                         <li className="navbar__item navbar__gear">
                             <Link className="navbar__link" to="/gearlist">Gear</Link>
                         </li>
