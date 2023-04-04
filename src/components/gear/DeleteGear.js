@@ -29,7 +29,7 @@ export const DeleteGear = () => {
             {
                 gearItems?.map(
                     (gearItem) => {
-                        return <><section className="gearItemObject flex-wrap h-[350px] w-[750px] py-8 px-8 max-w-sm mx-auto rounded-xl shadow-lg shadow-orange-300 space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6" key={gearItem.id}>
+                        return <><section className="gearItemObject flex-wrap h-[350px] w-[750px] py-8 px-8 max-w-sm mx-auto rounded-xl shadow-lg shadow-black space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6" key={gearItem.id}>
                         <div className="gearItemObject" ><h3 className="gearCategories text-center space-y-2 sm:text-left">{gearItem?.categories?.name}</h3>
                         <img className="gearImage block mx-auto h-24 w-24 rounded-full sm:mx-0 sm:shrink-0" src={gearItem.imageURL} alt=""/>
                         <div className="space-y-0.5">
